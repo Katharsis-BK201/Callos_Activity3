@@ -8,13 +8,14 @@
     <h2>Product Inventory</h2>
     <a href="task1.php"><button>My Profile</button></a>
     <table>
-        <tr>
-            <th>Product Name</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            
-        </tr>
-        <?php
+    <?php
+    echo "<table border='1' style='border-collapse: collapse; width: 25%; text-align: left;'>";
+        echo "<tr>";
+        echo "<th>Product Name</th>";
+        echo "<th>Price</th>";
+        echo "<th>Quantity</th>";
+        echo "</tr>";
+        
         // Array of product types for variety
         $productTypes = ['Laptop', 'Smartphone', 'Headphones', 'Mouse', 'Keyboard', 'Monitor', 'Tablet', 
                         'Printer', 'Speaker', 'Camera'];
@@ -27,9 +28,9 @@
             $quantity = rand(0, 100);
             
             echo "<tr>";
-            echo "<td>$productName</td>";
+            echo "<td>" . $productName . "</td>";
             echo "<td>₱" . $price . "</td>";
-            echo "<td>$quantity</td>";
+            echo "<td>" . $quantity . "</td>";
             echo "</tr>";
         }
         ?>
